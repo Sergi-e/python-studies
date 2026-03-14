@@ -1,1 +1,1 @@
-# python-studies
+# This Repo contains the python simple projects worked on while re-learning python language on Freecodecamp
