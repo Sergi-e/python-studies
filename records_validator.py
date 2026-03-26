@@ -30,7 +30,7 @@ medical_records = [
         'diagnosis': 'Chronic Back Pain',
         'medications': ['Ibuprofen', 'Physical Therapy'],
         'last_visit_id': 'V2304',
-    }   
+    }
 ]
 
 def validate(data):
@@ -50,7 +50,11 @@ def validate(data):
             print(f'Invalid format: expected a dictionary at position {index}.')
             is_invalid = True
 
-        
+        if set(dictionary.keys()) != key_set:
+            print(
+                f'Invalid format: {dictionary} at position {index} has missing and/or invalid keys.'
+            )
+            is_invalid = True
 
     if is_invalid:
         return False
