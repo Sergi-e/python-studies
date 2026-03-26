@@ -1,3 +1,5 @@
+import re
+
 medical_records = [
     {
         'patient_id': 'P1001',
@@ -37,10 +39,10 @@ def find_invalid_records(
     patient_id, age, gender, diagnosis, medications, last_visit_id
 ):
     constraints = {
-        
+        'patient_id': isinstance(patient_id, str) and re.search('p', patient_id)
     }
     return constraints
-    
+
 def validate(data):
     is_sequence = isinstance(data, (list, tuple))
 
