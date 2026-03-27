@@ -55,6 +55,8 @@ add_setting({'theme': 'light'}, ('volume', 'high'))
 update_setting({'theme': 'light'}, ('theme', 'dark'))
 update_setting({'theme': 'light'}, ('volume', 'high'))
 
+delete_setting({'theme': 'light'}, 'theme')
+
 
 
     
