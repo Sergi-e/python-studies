@@ -51,6 +51,7 @@ test_settings={
 
 add_setting({'theme': 'light'}, ('THEME', 'dark')) 
 add_setting({'theme': 'light'}, ('volume', 'high'))  
+update_setting({'theme': 'light'}, ('theme', 'dark'))
 
 
 
