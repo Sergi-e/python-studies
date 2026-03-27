@@ -21,6 +21,12 @@ def update_setting(settings: dict, settings_pair: tuple):
     settings[key]=value
     return f'Setting {key} added with value {value} successfully!'
 
-def delete_setting(settings: dict, settings_pair: tuple):
-    key, value=settings_pair
+def delete_setting(settings: dict, key):
+    key=key.lower()
+
+    if key in settings:
+        del settings[key]
+        return f'Setting {key} deleted successfully!'
+    
+    return f'Setting not found!'
     
