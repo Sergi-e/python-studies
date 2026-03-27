@@ -9,3 +9,18 @@ def add_setting(settings: dict, setting_pair: tuple):
     
     settings[key] = value
     return f"Setting '{key}' added with value '{value}' successfully!"
+
+def update_setting(settings: dict, settings_pair: tuple):
+    key, value=settings_pair
+    key=key.lower()
+    value=value.lower()
+
+    if key in settings:
+        return f'Setting {key} already exists! Cannot add a new setting with this name.'
+
+    settings[key]=value
+    return f'Setting {key} added with value {value} successfully!'
+
+def delete_setting(settings: dict, settings_pair: tuple):
+    key, value=settings_pair
+    
