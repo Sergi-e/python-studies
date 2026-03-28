@@ -15,8 +15,11 @@ def validate_isbn(isbn, length):
     # Calculate the check digit from other digits
     if length == 10:
         expected_check_digit = calculate_check_digit_10(main_digits_list)
-    else:
+    elif length == 13:
         expected_check_digit = calculate_check_digit_13(main_digits_list)
+    else:
+        print("Length should be 10 or 13.")
+        return
     # Check if the given check digit matches with the calculated check digit
     if given_check_digit == expected_check_digit:
         print('Valid ISBN Code.')
