@@ -3,9 +3,9 @@ def validate_isbn(isbn, length):
         print(f'ISBN-{length} code should be {length} digits long.')
         return
     
-    main_digits = isbn[0:length]
-    given_check_digit = isbn[length]
-    main_digits_list = [int(digit) for digit in main_digits]
+    main_digits = isbn[:length - 1]
+    given_check_digit = isbn[length - 1]
+    
     # Calculate the check digit from other digits
     if length == 10:
         expected_check_digit = calculate_check_digit_10(main_digits_list)
