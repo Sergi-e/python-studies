@@ -47,7 +47,14 @@ def calculate_check_digit_13(main_digits_list):
             digits_sum += digit
         else:
             digits_sum += digit * 3
-        
+    
+    result = 10 - digits_sum % 10
+
+    if result == 10:
+        return '0'
+    else:
+        return str(result)
+    
 def main():
     user_input = input('Enter ISBN and length: ')
     values = user_input.split(',')
