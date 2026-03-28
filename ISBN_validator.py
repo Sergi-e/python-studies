@@ -57,12 +57,13 @@ def calculate_check_digit_13(main_digits_list):
     
 def main():
     user_input = input('Enter ISBN and length: ')
-    values = user_input.split(',')
-    isbn = values[0]
-    length = int(values[1])
-    if length == 10 or length == 13:
-    validate_isbn(isbn, length)
-    else:
-    print('Length should be 10 or 13.')
+
+    try:
+        values = user_input.split(',')
+        isbn = values[0]
+        length = values[1]
+    except IndexError:
+        print("Enter comma-separated values.")
+        return
 
 main()
