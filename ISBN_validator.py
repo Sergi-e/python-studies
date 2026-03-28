@@ -20,8 +20,8 @@ def validate_isbn(isbn, length):
     else:
         print("Length should be 10 or 13.")
         return
-    # Check if the given check digit matches with the calculated check digit
-    if given_check_digit == expected_check_digit:
+    # Compare check digits (handle X case)
+    if given_check_digit.upper() == expected_check_digit:
         print('Valid ISBN Code.')
     else:
         print('Invalid ISBN Code.')
