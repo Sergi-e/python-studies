@@ -1,7 +1,8 @@
 def validate_isbn(isbn, length):
-    if len(isbn, length) != length:
+    if len(isbn) != length:
         print(f'ISBN-{length} code should be {length} digits long.')
         return
+    
     main_digits = isbn[0:length]
     given_check_digit = isbn[length]
     main_digits_list = [int(digit) for digit in main_digits]
