@@ -41,24 +41,13 @@ def calculate_check_digit_10(main_digits_list):
         return str(result)
     
 def calculate_check_digit_13(main_digits_list):
-    # Note: You don't have to fully understand the logic in this function.
     digits_sum = 0
-    # Multiply each of the first 12 digits by 1 and 3 alternately (starting with 1), and sum up the results
     for index, digit in enumerate(main_digits_list):
         if index % 2 == 0:
-            digits_sum += digit * 1
+            digits_sum += digit
         else:
             digits_sum += digit * 3
-    # Find the remainder of dividing the sum by 10, then subtract it from 10
-    result = 10 - digits_sum % 10
-    # The calculation result can range from 1 to 10.
-    # If the result is 10, use 0.
-    # Use the value as it is for other numbers.
-    if result == 10:
-        expected_check_digit = '0'
-    else:
-        expected_check_digit = str(result)
-    return expected_check_digit
+        
 def main():
     user_input = input('Enter ISBN and length: ')
     values = user_input.split(',')
