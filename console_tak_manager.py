@@ -52,4 +52,8 @@ def view_tasks(tasks):
         result += f"{name.capitalize()}: {status}\n"
     
     return result
+
+def main():
+    tasks = {}
+
     
