@@ -77,5 +77,8 @@ def main():
 
         else:
             print("Invalid action.")
+            
+    except ValueError:
+        print("Enter comma-separated values.")
 
     
