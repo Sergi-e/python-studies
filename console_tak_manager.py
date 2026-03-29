@@ -47,3 +47,9 @@ def view_tasks(tasks):
     if not tasks:
         return "No tasks available."
     
+    result = "Task List:\n"
+    for name, status in tasks.items():
+        result += f"{name.capitalize()}: {status}\n"
+    
+    return result
+    
