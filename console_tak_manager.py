@@ -19,3 +19,8 @@ def add_task(tasks, task_pair):
 
     tasks[name] = status
     return f"Task '{name}' added with status '{status}'."
+
+def update_task(tasks, task_pair):
+    name, status = task_pair
+    name = name.lower()
+    status = status.lower()
