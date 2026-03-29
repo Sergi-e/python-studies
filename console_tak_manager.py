@@ -33,3 +33,6 @@ def update_task(tasks, task_pair):
 
     tasks[name] = status
     return f"Task '{name}' updated to '{status}'."
+
+def delete_task(tasks, name):
+    name = name.lower()
