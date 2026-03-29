@@ -94,3 +94,6 @@ print(add_task(test_tasks, ("Gym", "done")))
 print(add_task(test_tasks, ("Read", "invalid")))         # invalid status
 
 print(view_tasks(test_tasks))
+
+print(update_task(test_tasks, ("Homework", "done")))
+print(update_task(test_tasks, ("Cooking", "pending")))   # non-existing

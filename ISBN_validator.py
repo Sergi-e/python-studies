@@ -76,4 +76,4 @@ def main():
     else:
         print("Length should be 10 or 13.")
 
-main()
+# main()
