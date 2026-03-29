@@ -67,5 +67,15 @@ def main():
                 print(add_task(tasks, (name, status)))
             else:
                 print(update_task(tasks, (name, status)))
+                
+        elif action == "delete":
+            name = input("Enter task name: ")
+            print(delete_task(tasks, name))
+
+        elif action == "view":
+            print(view_tasks(tasks))
+
+        else:
+            print("Invalid action.")
 
     
