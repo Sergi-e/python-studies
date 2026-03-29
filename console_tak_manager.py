@@ -6,3 +6,7 @@
 # - string normalization
 # - validation
 
+def add_task(tasks, task_pair):
+    name, status = task_pair
+    name = name.lower()
+    status = status.lower()
