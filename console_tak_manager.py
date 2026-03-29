@@ -55,5 +55,17 @@ def view_tasks(tasks):
 
 def main():
     tasks = {}
+    
+    try:
+        action = input("Enter action (add/update/delete/view): ").lower()
+
+        if action in ["add", "update"]:
+            raw = input("Enter task,status: ")
+            name, status = raw.split(',')
+
+            if action == "add":
+                print(add_task(tasks, (name, status)))
+            else:
+                print(update_task(tasks, (name, status)))
 
     
