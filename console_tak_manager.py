@@ -87,3 +87,8 @@ def main():
 # ---------------- TESTING ----------------
 
 test_tasks = {}
+
+print(add_task(test_tasks, ("Homework", "pending")))
+print(add_task(test_tasks, ("Homework", "done")))        # duplicate
+print(add_task(test_tasks, ("Gym", "done")))
+print(add_task(test_tasks, ("Read", "invalid")))         # invalid status
