@@ -42,3 +42,8 @@ def delete_task(tasks, name):
         return f"Task '{name}' deleted."
     
     return "Task not found."
+
+def view_tasks(tasks):
+    if not tasks:
+        return "No tasks available."
+    
