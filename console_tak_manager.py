@@ -97,3 +97,6 @@ print(view_tasks(test_tasks))
 
 print(update_task(test_tasks, ("Homework", "done")))
 print(update_task(test_tasks, ("Cooking", "pending")))   # non-existing
+
+print(delete_task(test_tasks, "Gym"))
+print(delete_task(test_tasks, "Gym"))                    # already deleted
