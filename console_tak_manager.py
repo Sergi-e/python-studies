@@ -36,3 +36,9 @@ def update_task(tasks, task_pair):
 
 def delete_task(tasks, name):
     name = name.lower()
+    
+    if name in tasks:
+        del tasks[name]
+        return f"Task '{name}' deleted."
+    
+    return "Task not found."
